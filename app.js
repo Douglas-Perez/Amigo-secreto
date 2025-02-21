@@ -21,3 +21,16 @@ function exibirLista() {
         console.log(amigo)
     }
 }
+
+function sortearAmigo() {
+    let sorteado = amigos[parseInt(Math.random() * amigos.length)]
+    console.log(sorteado)
+    if (amigos.length == 0) {
+        alert("Por favor, adicione um nome antes de sortear");
+        return;
+    }
+    let resultado = document.getElementById("resultado")
+    resultado.innerHTML = ""
+    mensagem = `O amigo secreto sorteado é: ${sorteado}`
+    resultado.innerHTML = mensagem
+}
