@@ -8,7 +8,6 @@ function adicionarAmigo() {
         return;
     }
     amigos.push(nome);
-    console.log(amigos)
     exibirLista();
 }
 
@@ -18,13 +17,11 @@ function exibirLista() {
     for (let amigo of amigos) {
         let mensagem = `<li>${amigo}</li>`;
         listaAmigos.innerHTML += mensagem;
-        console.log(amigo)
     }
 }
 
 function sortearAmigo() {
     let sorteado = amigos[parseInt(Math.random() * amigos.length)]
-    console.log(sorteado)
     if (amigos.length == 0) {
         alert("Por favor, adicione um nome antes de sortear");
         return;
